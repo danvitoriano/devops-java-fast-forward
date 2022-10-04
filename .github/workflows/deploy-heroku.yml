@@ -15,7 +15,7 @@ jobs:
         uses: gradle/gradle-build-action@v2
 
       - name: Execute Gradle build
-        run: ./gradlew build
+        run: ./gradlew clean build -x test
 
       - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
         with:
