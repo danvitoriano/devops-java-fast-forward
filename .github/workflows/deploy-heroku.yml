@@ -1,0 +1,18 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
+        with:
+          heroku_api_key: "f70728b2-7b94-4e84-a1c0-1261a5bbbb92"
+          heroku_app_name: "modulo-4"
+          heroku_email: "diegu.jc@gmail.com"
+          usedocker: true
